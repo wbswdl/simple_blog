@@ -1,0 +1,12 @@
+<%- include('header') %>
+<% if(!posts.length || posts == null){%>
+    <div class="nothing">
+        <h1>空空如也</h1>
+        <p>这个人很懒什么都没留下！</p>
+    </div>
+
+<%}%>
+<% posts.forEach(function (post) { %>
+    <%- include('components/post-content', { post: post}) %>
+<% }) %>
+<%- include('footer') %>
